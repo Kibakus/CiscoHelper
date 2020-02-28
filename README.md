@@ -42,6 +42,7 @@ wr
 8)There is also device management using checkbox and their grouping using the SETTINGS function.
 
 ### Part Two - Checking VMware
+There are a number of checks:
 1)Checking power on of a virtual machine
 2)Checking Installed VMTools
 3)Checking installed programs
