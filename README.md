@@ -45,5 +45,7 @@ wr
 1) Checking power on of a virtual machine
 2) Checking Installed VMTools
 3) Checking installed programs
+
 Windows: WinSDP, Java
+
 Linux: tcpdump, net-tools, lynx, dnsutils, ftp, lftp, sshpass, curl, open-vm-tools
