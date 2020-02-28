@@ -34,7 +34,7 @@ no sh
 end
 wr
 ```
-3) Firmware - This function displays the firmware of one (or several) device
+3) Firmware - This function displays the firmware of one (or several) devices
 4) Register - This function displays the register of one (or several) devices
 5) Ports - This function displays the switching table (show cdp neighbors)
 6) Clear - This function clears all flash memory except firmware
@@ -42,9 +42,8 @@ wr
 8)There is also device management using checkbox and their grouping using the SETTINGS function.
 
 ### Part Two - Checking VMware
-There are a number of checks:
-1)Checking power on of a virtual machine
-2)Checking Installed VMTools
-3)Checking installed programs
+1) Checking power on of a virtual machine
+2) Checking Installed VMTools
+3) Checking installed programs
 Windows: WinSDP, Java
 Linux: tcpdump, net-tools, lynx, dnsutils, ftp, lftp, sshpass, curl, open-vm-tools
