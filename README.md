@@ -11,3 +11,4 @@ NetworkHelper has the following requirements
 - [netmiko](https://github.com/ktbyers/netmiko)
 - [pyvmomi](https://github.com/vmware/pyvmomi)
 - [flask](https://github.com/pallets/flask)
+- [requests](https://github.com/psf/requests)
