@@ -10,5 +10,5 @@ To install NetworkHelper, simply us pip:
 
 NetworkHelper has the following requirements
 - [netmiko](https://github.com/ktbyers/netmiko)
-- pyvmomi
-- flask
+- [pyvmomi](https://github.com/vmware/pyvmomi)
+- [flask](https://github.com/pallets/flask)
