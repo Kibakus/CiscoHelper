@@ -12,3 +12,11 @@ NetworkHelper has the following requirements
 - [pyvmomi](https://github.com/vmware/pyvmomi)
 - [flask](https://github.com/pallets/flask)
 - [requests](https://github.com/psf/requests)
+
+## Description
+
+The program consists of two parts, this is the main part and the python script for checking VM
+
+=======
+
+### Main part - control cisco devices
