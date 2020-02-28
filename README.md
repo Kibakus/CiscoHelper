@@ -1,0 +1,14 @@
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/netmiko.svg)
+NetworkHelper
+=======
+
+Multi-vendor library to simplify Paramiko SSH connections to network devices
+
+## Installation
+
+To install NetworkHelper, simply us pip:
+
+NetworkHelper has the following requirements
+- [netmiko](https://github.com/ktbyers/netmiko)
+- pyvmomi
+- flask
