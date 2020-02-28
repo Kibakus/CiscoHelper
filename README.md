@@ -18,3 +18,4 @@ NetworkHelper has the following requirements
 The program consists of two parts, this is the main part and the python script for checking VM
 
 ### Main part - control cisco devices
+There are a number of automated management functions.
