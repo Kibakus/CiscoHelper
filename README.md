@@ -39,5 +39,11 @@ wr
 5) Ports - This function displays the switching table (show cdp neighbors)
 6) Clear - This function clears all flash memory except firmware
 7) Flashing - This function flashes cisco devices using firmware from the folder, finding matches in name of the first part. Example "c2801-adventerprisek9_ivs-mz.151-4.M12a.bin" the search will occur by coincidence "c2801". Used TFTP server connected to the topology
+8)There is also device management using checkbox and their grouping using the SETTINGS function.
 
-*)There is also device management using checkbox and their grouping using the settings function.
+### Part Two - Checking VMware
+1)Checking power on of a virtual machine
+2)Checking Installed VMTools
+3)Checking installed programs
+Windows: WinSDP, Java
+Linux: tcpdump, net-tools, lynx, dnsutils, ftp, lftp, sshpass, curl, open-vm-tools
