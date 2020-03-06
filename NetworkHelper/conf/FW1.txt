@@ -1,0 +1,15 @@
+conf t
+int E0/4
+no sh
+int E0/5
+no sh
+int vlan 1
+no sh
+nameif inside
+ip add 192.168.254.2 255.255.255.0
+enable password cisco
+username cisco password cisco
+aaa authentication telnet console LOCAL
+telnet 192.168.254.0 255.255.255.0 inside
+end
+wr

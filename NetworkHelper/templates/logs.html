@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Logs</title>
+        <meta http-equiv="refresh" content="1">
+    </head>
+    <style>
+        table {border-collapse:collapse;}
+        td, th {border: 1px solid black;}
+    </style>
+    <body>
+        <table>
+            <th>HQ</th>
+            <tr>
+                {% for post in settings.HQ|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        <table>
+            <th>BR</th>
+            <tr>
+                {% for post in settings.BR|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+                </tr>
+        </table>
+        <table>
+            <th>ISP</th>
+            <tr>
+                {% for post in settings.ISP|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        <table>
+            <th>SW3</th>
+            <tr>
+                {% for post in settings.SW3|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        <table>
+            <th>SW2</th>
+            <tr>
+                {% for post in settings.SW2|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        <table>
+            <th>SW1</th>
+            <tr>
+                {% for post in settings.SW1|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        <table>
+            <th>FW1</th>
+            <tr>
+                {% for post in settings.FW1|sort() %}
+                <td>{{post}}</td>
+                {% endfor %}
+            </tr>
+        </table>
+        Not definitely: {{device}}
+        </br></br>
+        <table>
+            <tr>
+                <td style="width:86px;overflow: hidden;">
+                    {% for port, stats in active.items()|sort() %}
+                    <small>{{port}} ==> {{stats}}</small></br>
+                    {% endfor %}
+
+                </td>
+                <td style="width:800px;overflow: hidden;">
+                    {% for port, stats in status.items()|sort() %}
+                    <small>{{port}} ==> {{stats}}</small></br>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+conf t
+enable password cisco
+line vty 0 4
+password cisco
+transport input telnet
+end
+conf t
+int f0/1
+no sh
+ip add 192.168.254.1 255.255.255.0
+end
+wr

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Main</title>
+    </head>
+    <style>
+        #div1.hide {display: none;}
+    </style>
+    <body>
+        <script language="JavaScript">
+            function toggle(source)
+            {
+                var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                for (var i = 0; i < checkboxes.length; i++)
+                {
+                    if (checkboxes[i] != source)
+                    checkboxes[i].checked = source.checked;
+                }
+            }
+            function hide(){document.getElementById('div1').style.display ='none';}
+            function show(){document.getElementById('div1').style.display = 'block';}
+            function vib()
+            {
+                 if (document.querySelector("body > form > label:nth-child(59) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'MANUAL');
+                    document.querySelector("#div1 > label").innerText = "MANUAL";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(60) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'HQ');
+                    document.querySelector("#div1 > label").innerText = "HQ";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(61) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'BR');
+                    document.querySelector("#div1 > label").innerText = "BR";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(62) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'ISP');
+                    document.querySelector("#div1 > label").innerText = "ISP";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(63) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'SW3');
+                    document.querySelector("#div1 > label").innerText = "SW3";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(64) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'SW2');
+                    document.querySelector("#div1 > label").innerText = "SW2";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(65) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'SW1');
+                    document.querySelector("#div1 > label").innerText = "SW1";
+                    
+                }
+                if (document.querySelector("body > form > label:nth-child(66) > input[type=radio]").checked == true)
+                {
+                    document.querySelector("#div1 > input[type=file]").setAttribute('name', 'FW1');
+                    document.querySelector("#div1 > label").innerText = "FW1";
+                    
+                }
+            }
+        </script>
+        <form method="post" action="/obr">
+            <a href="/logs" target="popup" onclick="window.open('/logs','logs','width=900,height=1080')">Open new tab logs</a>
+            <p><input type="submit" value="Submit"></p>
+            <label><input type="checkbox" onClick="toggle(this)" /> Select All</label><br/>
+            <div id="ports" style="width:570px;overflow: hidden;">
+            {% for post in ports %}
+            <td><label><input type="checkbox" name='{{post}}'>{{post}}</label></td>
+            {% endfor %}
+            </div>
+            <hr>
+            <label><input name="device" type="radio" value="MANUAL" checked onclick="vib();">MANUAL</label>
+            <label><input name="device" type="radio" value="HQ" onclick="vib();">HQ</label>
+            <label><input name="device" type="radio" value="BR" onclick="vib();">BR</label>
+            <label><input name="device" type="radio" value="ISP" onclick="vib();">ISP</label>
+            <label><input name="device" type="radio" value="SW3" onclick="vib();">SW3</label>
+            <label><input name="device" type="radio" value="SW2" onclick="vib();">SW2</label>
+            <label><input name="device" type="radio" value="SW1" onclick="vib();">SW1</label>
+            <label><input name="device" type="radio" value="FW1" onclick="vib();">FW1</label>
+            <label><input name="device" type="radio" value="RESET">RESET</label><br/>
+            <hr>
+            <label>Mode</label><br>
+            <label><input name="mode" type="radio" value="Setings" checked onclick="hide();" > Setings</label>
+            <label><input name="mode" type="radio" value="Reset" onclick="hide();" > Reset</label>
+            <label><input name="mode" type="radio" value="Config" onclick="show();" > Config</label>
+            <label><input name="mode" type="radio" value="Firmware" onclick="hide();" > Firmware</label>
+            <label><input name="mode" type="radio" value="Register" onclick="hide();" > Register</label>
+            <label><input name="mode" type="radio" value="Ports" onclick="hide();" > Ports</label>
+            <label><input name="mode" type="radio" value="Clear" onclick="hide();" > Clear</label>
+            <label><input name="mode" type="radio" value="Flashing" onclick="hide();" > Flashing</label>
+            <label><input name="mode" type="radio" value="Check" onclick="hide();" > Check</label>
+            <hr>
+            <div id="div1" class="hide">
+                <input type="file" name="MANUAL">
+                <label>MANUAL</label>
+            </div>
+        </form>
+    </body>
+</html>
